@@ -1,0 +1,9 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: taxidb-sql
+    env_file: .env
+    environment:
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
